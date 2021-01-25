@@ -24,7 +24,7 @@ void solve() {
             
             // If either number is inbetween the two bounds of one of the timeslots, then it won't work for that person
             for (int i = 0; i < cameron.size(); i++) {
-                if ((a < cameron[i][1] && a > cameron[i][0]) || (b < cameron[i][1] && b < cameron[i][0])) {
+                if ((a < cameron[i][1] && a > cameron[i][0]) || (b < cameron[i][1] && b > cameron[i][0])) {
                     c_ok = false;
                     break;
                 }
@@ -36,7 +36,7 @@ void solve() {
             }
             if (!c_ok) {
                 for (int i = 0; i < jamie.size(); i++) {
-                    if ((a < jamie[i][1] && a > cameron[i][0]) || (b < jamie[i][1] && jamie[i][0])) {
+                    if ((a < jamie[i][1] && a > cameron[i][0]) || (b < jamie[i][1] && b > jamie[i][0])) {
                         j_ok = false;
                         break;
                     }
